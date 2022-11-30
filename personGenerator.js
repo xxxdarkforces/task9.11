@@ -51,6 +51,38 @@ const personGenerator = {
         }
     }`,
 
+    proffMaleJson: `{
+        "count": 10,
+        "list": {     
+            "id_1": "Слесарь",
+            "id_2": "Сварищик",
+            "id_3": "Программист",
+            "id_4": "Тестировщик",
+            "id_5": "Солдат",
+            "id_6": "Директор",
+            "id_7": "Бухгалтер",
+            "id_8": "Водитель",
+            "id_9": "Стропальщик",
+            "id_10": "Безработный"
+        }
+    }`,
+
+    proffFemaleJson: `{
+        "count": 10,
+        "list": {     
+            "id_1": "Повар",
+            "id_2": "Кондитер",
+            "id_3": "Программист",
+            "id_4": "Няня",
+            "id_5": "Уборщица",
+            "id_6": "Директор",
+            "id_7": "Бухгалтер",
+            "id_8": "Продавец",
+            "id_9": "Флорист",
+            "id_10": "Домохозяйка"
+        }
+    }`,
+
     GENDER_MALE: 'Мужчина',
     GENDER_FEMALE: 'Женщина',
 
@@ -78,12 +110,56 @@ const personGenerator = {
         }
     },
 
+    randomPatronymic: function () {
+        if (this.person.gender == this.GENDER_MALE) {
+            return this.randomValue(this.firstNameMaleJson) + 'ович';
+        } else if (this.person.gender == this.GENDER_FEMALE) {
+            return this.randomValue(this.firstNameMaleJson) + 'овна';
+        }
+    },
+    
+    randomProff: function () {
+        if (this.person.gender == this.GENDER_MALE) {
+            return this.randomValue(this.proffMaleJson);
+        } else if (this.person.gender == this.GENDER_FEMALE) {
+            return this.randomValue(this.proffFemaleJson);
+        }
+    },
+
+    randomFoto: function () {
+        if (this.person.gender == this.GENDER_MALE) {
+            return '<img src="https://cdn-icons-png.flaticon.com/512/236/236831.png">';
+        } else if (this.person.gender == this.GENDER_FEMALE) {
+            return '<img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png">';
+        }
+    },
+
+    randomBirthYear: function () {
+            function daysInMonth (year, month) {
+                return new Date(year, month, 0).getDate();
+            }
+            month = this.randomIntNumber(12 , 1);
+            const monthNames = [          
+                "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
+                "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"
+            ];
+            monthName = monthNames[month-1];
+            year = this.randomIntNumber(1962 , 2005);
+            maxday = daysInMonth(year, month);
+            day = this.randomIntNumber(maxday , 1);
+            birthday = new Date(year, month, day);
+            return day + " " + monthName + " " + year + " года.";
+    },
 
     getPerson: function () {
         this.person = {};
         this.person.gender = this.randomIntNumber() === 1 ? this.GENDER_MALE : this.GENDER_FEMALE;
         this.person.firstName = this.randomFirstName();
         this.person.surnameName = this.randomSurname();
+        this.person.patronymic = this.randomPatronymic();
+        this.person.birthYear = this.randomBirthYear();
+        this.person.foto = this.randomFoto();
+        this.person.proff = this.randomProff();
         return this.person;
     }
 };
