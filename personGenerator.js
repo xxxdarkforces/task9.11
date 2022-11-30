@@ -139,7 +139,7 @@ const personGenerator = {
                 return new Date(year, month, 0).getDate();
             }
             month = this.randomIntNumber(12 , 1);
-            year = this.randomIntNumber(1962 , 2005);
+            year = this.randomIntNumber(1960 , 2004);
             maxday = daysInMonth(year, month);
             day = this.randomIntNumber(maxday , 1);
             birthday = new Date(year, month, day);
@@ -148,7 +148,7 @@ const personGenerator = {
                 month: 'long',
                 day: 'numeric',
                 timezone: 'UTC +3',
-            };
+              };
             return "Дата рождения: <br>" + birthday.toLocaleString("ru", options);
     },
 
