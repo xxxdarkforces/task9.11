@@ -48,8 +48,6 @@ body {
     float: left;
     border-radius: 5px;
     margin-right: 20px;
-    -webkit-filter: sepia(1);
-    -moz-filter: sepia(1);
     filter: sepia(1);
 }
 
@@ -68,7 +66,7 @@ body {
     font-size: 18px;
 }
 
-.window {
+.window_res {
     position: absolute;
     padding: 25px;
     padding-top: 0;

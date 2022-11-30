@@ -120,9 +120,9 @@ const personGenerator = {
     
     randomProff: function () {
         if (this.person.gender == this.GENDER_MALE) {
-            return this.randomValue(this.proffMaleJson);
+            return "Профессия: " + this.randomValue(this.proffMaleJson);
         } else if (this.person.gender == this.GENDER_FEMALE) {
-            return this.randomValue(this.proffFemaleJson);
+            return "Профессия: " + this.randomValue(this.proffFemaleJson);
         }
     },
 
@@ -148,7 +148,7 @@ const personGenerator = {
             maxday = daysInMonth(year, month);
             day = this.randomIntNumber(maxday , 1);
             birthday = new Date(year, month, day);
-            return day + " " + monthName + " " + year + " года.";
+            return "Дата рождения: " + day + " " + monthName + " " + year + " года.";
     },
 
     getPerson: function () {
@@ -161,5 +161,5 @@ const personGenerator = {
         this.person.foto = this.randomFoto();
         this.person.proff = this.randomProff();
         return this.person;
-    }
+    }, 
 };
