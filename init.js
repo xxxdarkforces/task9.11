@@ -4,9 +4,9 @@ window.onload = function () {
     document.getElementById('surnameOutput').innerText = initPerson.surnameName;
     document.getElementById('patronymicOutput').innerText = initPerson.patronymic;
     document.getElementById('genderOutput').innerText = initPerson.gender;
-    document.getElementById('birthYearOutput').innerText = initPerson.birthYear;
+    document.getElementById('birthYearOutput').innerHTML = initPerson.birthYear;
     document.getElementById('fotoOutput').innerHTML = initPerson.foto;
-    document.getElementById('proffOutput').innerHTML = initPerson.proff;
+    document.getElementById('proffOutput').innerText = initPerson.proff;
 };
 
 genButton = function () { 
@@ -15,9 +15,9 @@ genButton = function () {
     document.getElementById('surnameOutput').innerText = initPerson.surnameName;
     document.getElementById('patronymicOutput').innerText = initPerson.patronymic;
     document.getElementById('genderOutput').innerText = initPerson.gender;
-    document.getElementById('birthYearOutput').innerText = initPerson.birthYear;
+    document.getElementById('birthYearOutput').innerHTML = initPerson.birthYear;
     document.getElementById('fotoOutput').innerHTML = initPerson.foto;
-    document.getElementById('proffOutput').innerHTML = initPerson.proff;
+    document.getElementById('proffOutput').innerText = initPerson.proff;
 };
 
 clearButton = function () { 
@@ -26,6 +26,6 @@ clearButton = function () {
     document.getElementById('patronymicOutput').innerText = "";
     document.getElementById('genderOutput').innerText = "";
     document.getElementById('birthYearOutput').innerText = "";
-    document.getElementById('fotoOutput').innerHTML =  "";
-    document.getElementById('proffOutput').innerHTML =  "";
+    document.getElementById('fotoOutput').innerText =  "";
+    document.getElementById('proffOutput').innerText =  "";
 };

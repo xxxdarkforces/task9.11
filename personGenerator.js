@@ -154,7 +154,7 @@ const personGenerator = {
                 day: 'numeric',
                 timezone: 'UTC +3',
               };
-            return "Дата рождения: " + birthday.toLocaleString("ru", options);
+            return "Дата рождения: <br>" + birthday.toLocaleString("ru", options);
     },
 
     getPerson: function () {
