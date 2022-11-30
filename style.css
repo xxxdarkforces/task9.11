@@ -75,3 +75,17 @@ body {
     top: 40px;
     margin-left: -115px;
 }
+
+#genButton {
+    position: absolute;
+    left: 33%;
+    top: 260px;
+    z-index: 6;
+  }
+
+  #clearButton {
+    position: absolute;
+    right: 33%;
+    top: 260px;
+    z-index: 6;
+  }
