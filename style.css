@@ -79,14 +79,14 @@ body {
 
 #genButton {
     position: absolute;
-    left: 33%;
-    top: 260px;
+    top: 200px;
     z-index: 6;
+    left: 10px;
   }
 
   #clearButton {
     position: absolute;
-    right: 33%;
-    top: 260px;
+    top: 200px;
     z-index: 6;
+    right: 10px;
   }
