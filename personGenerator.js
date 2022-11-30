@@ -139,11 +139,6 @@ const personGenerator = {
                 return new Date(year, month, 0).getDate();
             }
             month = this.randomIntNumber(12 , 1);
-            const monthNames = [          
-                "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
-                "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"
-            ];
-            monthName = monthNames[month-1];
             year = this.randomIntNumber(1962 , 2005);
             maxday = daysInMonth(year, month);
             day = this.randomIntNumber(maxday , 1);
