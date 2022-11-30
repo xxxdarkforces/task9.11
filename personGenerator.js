@@ -148,7 +148,13 @@ const personGenerator = {
             maxday = daysInMonth(year, month);
             day = this.randomIntNumber(maxday , 1);
             birthday = new Date(year, month, day);
-            return "Дата рождения: " + day + " " + monthName + " " + year + " года.";
+            let options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                timezone: 'UTC +3',
+              };
+            return "Дата рождения: " + birthday.toLocaleString("ru", options);
     },
 
     getPerson: function () {
