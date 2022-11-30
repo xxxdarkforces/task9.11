@@ -143,12 +143,12 @@ const personGenerator = {
             maxday = daysInMonth(year, month);
             day = this.randomIntNumber(maxday , 1);
             birthday = new Date(year, month, day);
-            let options = {
+            options = {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
                 timezone: 'UTC +3',
-              };
+            };
             return "Дата рождения: <br>" + birthday.toLocaleString("ru", options);
     },
 
