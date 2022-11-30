@@ -38,6 +38,7 @@ body {
     top: 67.5px;
     margin-left: -250px;
     background: #E9E2D0;
+    border-radius: 5px;
     box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
     z-index: 5;
 }
