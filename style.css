@@ -55,7 +55,7 @@ body {
     font-family: courier;
     color: #333;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 0 150px;
     font-size: 22px;
     height: 50px;
 }
@@ -64,6 +64,7 @@ body {
     font-family: courier;
     color: #555;
     font-size: 18px;
+    padding: 0 0 0 150px;
 }
 
 .window_res {
