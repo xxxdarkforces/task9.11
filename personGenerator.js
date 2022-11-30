@@ -128,9 +128,9 @@ const personGenerator = {
 
     randomFoto: function () {
         if (this.person.gender == this.GENDER_MALE) {
-            return '<img src="https://cdn-icons-png.flaticon.com/512/236/236831.png">';
+            return '<img src="m.png">';
         } else if (this.person.gender == this.GENDER_FEMALE) {
-            return '<img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png">';
+            return '<img src="f.png">';
         }
     },
 
