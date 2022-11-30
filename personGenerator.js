@@ -148,7 +148,7 @@ const personGenerator = {
                 month: 'long',
                 day: 'numeric',
                 timezone: 'UTC +3',
-              };
+            };
             return "Дата рождения: <br>" + birthday.toLocaleString("ru", options);
     },
 
